@@ -1,23 +1,31 @@
 #include <iostream>
 
-using namespace std;
+/*El usuario debe ingresar un carácter y que despliegue si lo que se ingresó
+es:
+Letra minúscula
+Letra mayúscula
+Dígito
+Carácter especial
+*/
+int main () {
+    unsigned char letra;
+    std::string ms;
+    printf("Ingrese un valor: ");
+    scanf("%c", &letra);
 
-int main() {
-    double estatura;
-    string ms;
-    cout << "Ingrese una estatura en metros" << endl;
-    cin >> estatura;
-    if (estatura >= 1.30 && estatura <= 1.50){
-        ms = "Estatura baja";
+    if (letra >= 97  || letra <= 122){
+        ms = "El caracter es una letra minuscula";
     }
-    else if (estatura >= 1.51 && estatura <= 1.70){
-        ms = "Estatura media";
-    } else if ( estatura >= 1.71 && estatura <= 2.0){
-        ms = "Estatura alta";
-    } else if (estatura <= 1.30 || estatura >2.0) {
-        ms = "Estatura poco creible";
+    else if (letra >= 65 || letra <= 90){
+        ms = "El caracters es una letra mayuscula";
     }
+    else if (letra >= 48 || letra <= 57){
+        ms = "Es un digito";
+    }
+    else if (letra >=0 || letra <= 255){
+        ms = "Es un caracter especial";
+    }
+    std::cout << ms << std::endl;
 
-    cout << ms << endl;
     return 0;
 }
