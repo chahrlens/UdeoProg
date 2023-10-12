@@ -74,7 +74,7 @@ void appendProducts(Product *array[], int post)
         cin.ignore();
         cin >> stock;
 
-        tried = ((code > 0) && (name.length() > 0) && (price > -1) && (stock > -1)) ? true : false;
+        tried = ((code > 0) && (name.length() > 0) && (price > -1) && (stock > -1));
         if (tried){
             cout << "Datos incorrectos intente de nuevo: " << endl;
         } else {
